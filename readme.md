@@ -6,8 +6,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 
 ## Bronnenlijst
-1. -bron 1-
-2. -bron 2-
+1. -https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit-
+2. -http://jsbin.com/nukic/2/edit?html,css,output-
 3. -...-
 
 
@@ -50,7 +50,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 | student 1      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
+| menu ul li  | en dit             | en ik dit    | en dan ik dat    |
 | an dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
@@ -62,7 +62,7 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Breakdownschets (week 1)
 
-<img src="images/breakdownschets.png" width="1119px" alt="Home screenshot">
+<img src="images_readme/breakdownschets.png" width="1119px" alt="Home screenshot">
 
 
 
@@ -77,8 +77,8 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 **Screenshot(s) van de eerste pagina (small screen):**
 
-<img src="images/home-screen.png" width="389px" alt="Home screenshot">
+<img src="images_readme/home-screen.png" width="389px" alt="Home screenshot">
 
 **Screenshot(s) van de tweede pagina (small screen):**
 
-<img src="images/specs-screen.png" width="389px" alt="Specs screenshot">
+<img src="images_readme/specs-screen.png" width="389px" alt="Specs screenshot">
