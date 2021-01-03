@@ -11,11 +11,18 @@
   --v-black: #000000;
   --v-stroke: #dbd8d2;
   --v-gray: #768079;
+  --v-background: #ECE8E1;
 
   --v-border: rgba(236,232,225,.5);
   --v-allBorder: rgb(148,149,149);
+
+  --v-height: 100%;
+  --v-top: 100%;
 }
 
+body{
+  background-color: var(--v-background);
+}
 
 body::-webkit-scrollbar {
   display: none;
@@ -28,21 +35,50 @@ main {
   grid-template-rows:auto auto auto auto;
 }
 
+main::before {
+   content: "";
+   width: 0.0625em;
+   height: var(--v-height);
+   background-color: var(--v-black);
+   left: 5vw;
+   position: absolute;
+   display: block;
+   top: var(--v-top);
+   z-index: 100;
+}
+
+section::before {
+  content:"";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-left: 0.0625em solid black;
+  z-index: -1;
+}
+
 section {
   position: relative;
   height: 100%;
-  border-left: 1px solid var(--v-allBorder);
 }
 
 h1, h2, h3, h4, h5, h6, p {
     font-weight: 400;
+    max-width: 31.25em;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+  z-index: 5;
 }
 
 section h2 {
   font-family: Tungsten-Bold,arial,georgia,sans-serif;
-  font-size: 55px;
+  font-size: 3.4375em;
   line-height: 0.94;
-  padding-top: 25px;
+  padding-top: 0.5em;
   text-transform: uppercase;
   border-top: 1px solid var(--v-allBorder);
 }
@@ -50,15 +86,15 @@ section h2 {
 
 section h3 {
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
-  font-size: 20px;
+  font-size: 1.25em;
   line-height: 1.25;
-  margin: 15px 0;
+  margin: 0.9375em 0;
   text-transform: uppercase;
 }
 
 section p {
   font-family: DINNextW1G,arial,georgia,sans-serif;
-  font-size: 18px;
+  font-size: 0.9375em;
   line-height: 1.4;
   color: var(--v-gray);
 }
@@ -81,17 +117,21 @@ button, input[type="submit"], input[type="reset"] {
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+  z-index: 5;
 }
 
 /* HEADER MENU */
 header {
   /* zoals elke goeie dev ;) */
   z-index: 9999;
+  position: fixed;
+  width: 100vw;
 }
 
 header nav {
   height: 5em;
   background-color: var(--v-black);
+  color: var(--v-white);
   border-bottom: 0.125em solid rgba(51, 51, 51, 0.25);
   display: flex;
   align-items: center;
@@ -101,7 +141,8 @@ header nav ul {
   position: relative;
   width: 100%;
   display: flex;
-  flex-direction: row
+  flex-direction: row;
+  align-items: center;
 }
 
 header nav ul li {
@@ -110,38 +151,43 @@ header nav ul li {
   justify-content: center;
 }
 
-header nav ul .riotLi {
+header nav ul li:first-of-type {
   width: 6.75em;
 }
 
-header nav ul li .riot {
+header nav ul li:first-of-type button {
   width: 10em;
   height: 10em;
   display: inline-block;
-  background: url("../assets/images/header/fistsprite.png") 0 -2400px no-repeat;
+  background: url("../assets/images/header/fistsprite.png") 0 -150em no-repeat;
   zoom: 0.33;
   transition: background-position 5s steps(15, end);
 }
 
-header nav ul .logoLi {
+header nav ul li:nth-of-type(2) {
   margin: auto;
 }
 
-header nav ul .logo {
+header nav ul li:nth-of-type(2) img {
   height: 2em;
 }
 
-header nav ul li .lang {
+header nav ul li:nth-of-type(3) {
+  display: none;
+}
+
+header nav ul li:nth-of-type(4) img {
   margin: 0 0.5em 0 2em;
   width: 0.875em;
   height: 0.875em;
 }
 
-header nav ul li .menuMobile {
+header nav ul li:last-of-type button {
   margin: 0 0.6875em 0 0.6875em;
   width: 2em;
   height: 2em;
   background: url("../assets/images/header/menu.svg");
+  z-index: 2;
 }
 
 
@@ -149,20 +195,27 @@ header nav ul li .menuMobile {
 footer {
   background-color: var(--v-black);
   color: var(--v-gray);
-  padding: 0 40px;
+  padding: 0 2.5em;
+  display: flex;
+  justify-content: center;
+}
+
+footer div {
+  max-width: 32.5em;
+  margin: 2em 0;
 }
 
 footer h4 {
   color: var(--v-gray);
   font-family: DINNextW05-Bold,arial,georgia,sans-serif;
-  font-size: 12px;
-  padding-top: 40px;
+  font-size: 0.75em;
   display: flex;
   justify-content: center;
+  max-width: unset;
 }
 
 footer a img {
-  margin: 40px auto;
+  margin: 2.5em auto;
   display: flex;
 }
 
@@ -174,15 +227,190 @@ footer ul {
   align-items: center;
 }
 
+footer ul:nth-of-type(2) {
+  margin: 0.9375em;
+}
+
+footer ul:nth-of-type(2) li {
+  border-bottom: 0.0625em solid var(--v-stroke);
+}
+
 footer ul li a img {
-  width: 24px;
+  width: 1.5em;
 }
 
 footer ul:nth-of-type(3) li {
   width: 49%;
-  margin: 0 10px;
+  margin: 0 0.625em;
 }
 
 footer ul:nth-of-type(3) li {
   width: 49%;
+}
+
+.dropdown-content li:first-of-type{
+  display: none;
+}
+
+/* -------------------responsive------------------- */
+
+@media only screen and (max-width: 59.375em) {
+  header nav ul li {
+    justify-content: unset;
+  }
+  header nav ul li:nth-of-type(3){
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: unset;
+  }
+  header nav ul li:nth-of-type(3) ul{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translatex(100%);
+    transition: 0.8s;
+    width: 19.6875em;
+    height: 100vh;
+    background: #212121;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  header nav ul li:nth-of-type(3) .menuShow{
+    transform: translatex(-100%);
+  }
+
+  header nav ul li:nth-of-type(3) ul li{
+    background: #212121;
+    border-top: 0.125em solid #262626;
+    box-shadow: -0.1875em 0.1875em 0.375em rgba(0, 0, 0, 0.5);
+    margin: 0 0.75em;
+    width: 100%;
+    padding: 1.125em;
+    font-size: 1em;
+    font-family: "MarkforEbiquityW05-Bold";
+    font-weight: 800;
+  }
+
+  header nav ul li:nth-of-type(3) ul li:nth-of-type(3){
+    position: unset;
+    top: unset;
+    right: unset;
+    display: unset;
+  }
+
+  header nav ul li:nth-of-type(3) ul li ul{
+    display: none;
+  }
+
+/* sub menu*/
+  .dropdown-content li:first-of-type {
+    display: unset;
+    padding: 1.675em 0 1.675em 1.125em;
+    background-color: var(--v-black);
+  }
+
+  header nav ul li:nth-of-type(3) ul li:nth-of-type(2) ul,header nav ul li:nth-of-type(3) ul li:nth-of-type(5) ul,header nav ul li:nth-of-type(3) ul li:nth-of-type(6) ul  {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translatex(200%);
+    display: none;
+    width: 26.6875em;
+    height: 100vh;
+    background: #212121;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    z-index: 11;
+  }
+
+  header nav ul li:nth-of-type(3) ul li:nth-of-type(2) .menuShowGameInfo{
+    transform: translatex(0%);
+  }
+
+  header nav ul li:nth-of-type(3) ul li:nth-of-type(5) .menuShowGameSupport{
+    transform: translatex(0%);
+  }
+
+  header nav ul li:nth-of-type(3) ul li:nth-of-type(6) .menuShowGameSocial{
+    transform: translatex(0%);
+  }
+
+}
+
+@media only screen and (min-width: 59.375em) {
+  main {
+    grid-template-columns:18vw 64vw 18vw;
+  }
+  main::before {
+     left: 18vw;
+  }
+  .dropdown-container .dropdown-content:first-of-type, .dropdown-container .dropdown-content:first-of-type ul li:first-of-type {
+    display: none;
+    visibility: hidden;
+  }
+  header nav ul li:nth-of-type(2) {
+    margin: unset;
+  }
+  header nav ul li:nth-of-type(3) {
+    margin-right: auto;
+    display: unset;
+  }
+  header nav ul li:nth-of-type(3) ul li{
+    position: relative;
+    margin: auto 0.9375em;
+    font-size: 0.7em;
+    font-family: "MarkforEbiquityW05-Bold";
+    font-weight: 800;
+    display: inline-block;
+  }
+  header nav ul li:nth-of-type(3) ul li ul {
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 4em;
+    background-color: var(--v-black);
+    text-align: left;
+    font-size: 1em;
+    min-width: 12.5em;
+    opacity: 0;
+    display: none;
+  }
+  header nav ul li:nth-of-type(3) ul li ul li {
+    color: var(--v-white);
+    border-bottom: solid 2px var(--v-black);
+    list-style-type: none;
+    margin: 1em;
+  }
+  header nav ul li:nth-of-type(3) ul li ul  a {
+    color: var(--v-white);
+    padding: 0.75em 2em;
+    width: 100%;
+    font-size: 1.25em;
+  }
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 14em;
+  }
+  section h2 {
+    font-size: 7.5em;
+  }
+  section h3 {
+    font-size: 1.3125em;
+  }
+  section p {
+    font-size: 1em;
+  }
+  header nav ul li:last-of-type button{
+    display: none;
+  }
 }

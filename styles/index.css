@@ -3,6 +3,7 @@
 /* video */
 section:first-of-type {
   margin: 0;
+  margin-top: 5em;
   width: 100%;
   border-left: 0;
   grid-column:1/-1;
@@ -22,7 +23,7 @@ section:first-of-type video {
 
 section:first-of-type > span {
   position: absolute;
-  border-left: 1px solid var(--v-allBorder);
+  border-left: 0.0625em solid var(--v-allBorder);
   height: 100%;
   left: 5%;
   z-index: 3;
@@ -41,10 +42,11 @@ section:first-of-type div {
 section:first-of-type div img {
   margin-top: 2.1875em;
   width: 85%;
+  max-width: 40.625em;
 }
 
 section:first-of-type div p {
-  padding: 0 50px;
+  padding: 0 3.125em;
   width: 85%;
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
   color: var(--v-white);
@@ -54,7 +56,7 @@ section:first-of-type div p {
 
 /* button */
 section:first-of-type button {
-  width: 85%;
+  width: 17.1875em;
   position: absolute;
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
   font-size: 1em;
@@ -62,7 +64,7 @@ section:first-of-type button {
   background-color: transparent;
   color: var(--v-white);
   left: 50%;
-  bottom: 2em;
+  bottom: 8em;
   transform: translateX(-50%);
 ;}
 
@@ -72,7 +74,7 @@ section:first-of-type button::after {
   position: absolute;
   height: 40%;
   width: 100%;
-  border: 1px solid var(--v-border);
+  border: 0.0625em solid var(--v-border);
   left: 0;
 }
 
@@ -90,7 +92,7 @@ section:first-of-type button span{
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 0px 0px;
+  padding: 0 0;
   background-color: var(--v-red);
 }
 
@@ -116,7 +118,7 @@ section:first-of-type button:hover span span:first-of-type {
 section:first-of-type button span span {
   position: relative;
   display: block;
-  padding: 1.2em 6.85em;
+  padding: 1.1875em 0;
   background-color: transparent;
   z-index: 1;
 }
@@ -145,14 +147,14 @@ section:nth-of-type(2){
 
 section:nth-of-type(2) h2:first-of-type {
   position: absolute;
-  font-size: 120px;
+  font-size: 7.5em;
   margin: 0;
   z-index: -1;
 }
 
 section:nth-of-type(2) h2:first-of-type span {
   display: block;
-  color: var(--v-white);
+  color: var(--v-background);
   -webkit-text-stroke: 1px var(--v-stroke);
 }
 
@@ -165,7 +167,7 @@ section:nth-of-type(2) h2:last-of-type {
     transform: translateY(8%);
     color: var(--v-red);
     border-top: unset;
-    padding-top: 75px;
+    padding-top: 0.6875em;
 }
 
 section:nth-of-type(2) ul {
@@ -183,18 +185,18 @@ section:nth-of-type(2) li + li {
 }
 
 section:nth-of-type(2) ul li article {
-  width: 308px;
+  width: 19.25em;
 }
 
 section:nth-of-type(2) ul li article time{
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
-  font-size: 14px;
+  font-size: 0.875em;
   color: var(--v-darkBlue);
 }
 
 section:nth-of-type(2) ul li article span{
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
-  font-size: 14px;
+  font-size: 0.875em;
   text-transform: uppercase;
   color: var(--v-red);
 }
@@ -207,32 +209,28 @@ section:nth-of-type(3){
 
 section:nth-of-type(3) p span:last-of-type{
   display: block;
-  margin: 25px 0;
+  margin: 1.5625em 0;
   color: var(--v-red);
 }
 
 section:nth-of-type(3) button{
   position: relative;
-  bottom: 100px;
+  bottom: 6.25em;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 70px;
-  height: 70px;
-  border: 1px solid var(--v-white);
+  width: 4.375em;
+  height: 4.375em;
+  border: 0.0625em solid var(--v-white);
   background: url("../assets/images/playButton.svg");
   background-color: var(--v-red);
 }
 
 /* YOUR AGENTS */
-div.red {
-  background-color: var(--v-red);
-  grid-column:1/-1;
-  grid-row:4;
-}
-
 section:nth-of-type(4) {
-  padding-top: 50px;
-  grid-column:2;
+  background-color: var(--v-red);
+  padding-top: 3.125em;
+  padding: 3.125em 5vw 0 5vw;
+  grid-column:1/-1;
   grid-row:4;
 }
 
@@ -247,7 +245,7 @@ section:nth-of-type(4) p{
 
 /* button */
 section:nth-of-type(4) a {
-  width: 85%;
+  width: 17.1875em;
   position: absolute;
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
   font-size: 1em;
@@ -257,6 +255,7 @@ section:nth-of-type(4) a {
   left: 50%;
   bottom:2em;
   transform: translateX(-50%);
+  text-align: center;
 }
 
 section:nth-of-type(4) a::before,
@@ -265,7 +264,7 @@ section:nth-of-type(4) a::after {
   position: absolute;
   height: 40%;
   width: 100%;
-  border: 1px solid var(--v-border);
+  border: 0.0625em solid var(--v-border);
   left: 0;
 }
 
@@ -283,7 +282,7 @@ section:nth-of-type(4) a span{
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 0px 0px;
+  padding: 0 0;
   background-color: var(--v-white);
 }
 
@@ -313,7 +312,7 @@ section:nth-of-type(4) a:hover span span:last-of-type {
 section:nth-of-type(4) a span span:last-of-type {
   position: relative;
   display: block;
-  padding: 1.2em 6.85em;
+  padding: 1.1875em 0;
   background-color: transparent;
   color: var(--v-black);
   z-index: 1;
@@ -339,21 +338,29 @@ section:nth-of-type(4) a:hover span:after{
 section:nth-of-type(4) img {
     position: relative;
     max-width: unset;
-    top: 53px;
-    right: 28px;
+    top: 3.3125em;
+    right: 1.75em;
     width: 125%;
+    max-width: 46.875em;
 }
 
 /* YOUR MAPS */
 section:nth-of-type(5){
-  padding-top: 60px;
-  grid-column:2;
+  padding-top: 3.75em;
+  grid-column:1/-1;
   grid-row:5;
+  height: 37.5em;
+}
+
+section:nth-of-type(5) div{
+  position: relative;
+  z-index: 2;
+  padding: 0 5vw 0 5vw;
 }
 
 /* button */
 section:nth-of-type(5) a {
-  width: 85%;
+  width: 17.1875em;
   position: absolute;
   font-family: DINNextW05-Medium,arial,georgia,sans-serif;
   font-size: 1em;
@@ -361,8 +368,9 @@ section:nth-of-type(5) a {
   background-color: transparent;
   color: var(--v-white);
   left: 50%;
-  bottom:2em;
+  bottom: -16em;
   transform: translateX(-50%);
+  text-align: center;
 ;}
 
 section:nth-of-type(5) a::before,
@@ -371,7 +379,7 @@ section:nth-of-type(5) a::after {
   position: absolute;
   height: 40%;
   width: 100%;
-  border: 1px solid var(--v-border);
+  border: 0.0625em solid var(--v-gray);
   left: 0;
 }
 
@@ -389,7 +397,7 @@ section:nth-of-type(5) a span{
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 0px 0px;
+  padding: 0 0;
   background-color: var(--v-red);
 }
 
@@ -419,7 +427,7 @@ section:nth-of-type(5) a:hover span span:last-of-type {
 section:nth-of-type(5) a span span:last-of-type {
   position: relative;
   display: block;
-  padding: 1.2em 6.85em;
+  padding: 1.1875em 0;
   background-color: transparent;
   color: var(--v-white);
   z-index: 1;
@@ -443,9 +451,100 @@ section:nth-of-type(5) a:hover span:after{
 
 /*img*/
 section:nth-of-type(5) img {
+  position: absolute;
+  width: 100%;
+  max-width: 59.375em;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* -------------------responsive------------------- */
+
+@media only screen and (min-width: 59.375em) {
+  /* VIDEO*/
+  section:first-of-type > span {
+    left: 18%;
+  }
+  /* LATEST NEWS */
+  section:nth-of-type(2) h2:first-of-type {
+    max-width: unset;
+    line-height: 0.8;
+  }
+  section:nth-of-type(2) h2:last-of-type {
+    transform: translateY(15%);
+    max-width: unset;
+  }
+  section:nth-of-type(2) h2:first-of-type span {
+    font-size: 2.3125em;
+  }
+  section:nth-of-type(2) ul {
+    margin-bottom: 3.125em;
+}
+  /* WE ARE VALORANT */
+  section:nth-of-type(3) h2 {
+    max-width: unset;
+  }
+  section:nth-of-type(3) div {
+    margin-top: 3.125em;
+    display: flex;
+  }
+  section:nth-of-type(3) div div {
+    display: unset;
+  }
+  section:nth-of-type(3) div div:first-of-type {
+    margin: 0 3.125em;
+  }
+  section:nth-of-type(3) div div:last-of-type{
+    margin-top: unset;
+  }
+  section:nth-of-type(3) button {
+    bottom: 40%;
+  }
+  /* YOUR AGENTS */
+  section:nth-of-type(4) {
+    padding: 0 18vw 1.5625em 18vw;
+  }
+  section:nth-of-type(4) {
+    display: flex;
+  }
+  section:nth-of-type(4) div {
     position: relative;
     max-width: unset;
-    top: 4px;
-    right: 291px;
-    width: 836px;
+    top: 3.3125em;
+    margin-bottom: 1.5625em;
+    order: 1;
+  }
+  section:nth-of-type(4) p {
+    margin-bottom: unset;
+  }
+  section:nth-of-type(4) a {
+    margin-top: 0.9375em;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+    margin-left: 0.625em;
+  }
+  section:nth-of-type(4) img {
+    width: 65%;
+}
+  /* YOUR MAPS */
+  section:nth-of-type(5) {
+    display: flex;
+  }
+  section:nth-of-type(5) div {
+    padding: 0 18vw 0 18vw;
+  }
+  section:nth-of-type(5) img {
+    transform: translateX(62%);
+    top: 5;
+  }
+  section:nth-of-type(5) a {
+    margin-top: 0.9375em;
+    margin-left: 0.9375em;
+    bottom: unset;
+    left: unset;
+    transform: unset;
+    margin-left: 0.625;
+  }
 }

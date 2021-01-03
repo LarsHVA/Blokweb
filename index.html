@@ -1,14 +1,16 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Lars">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Description" content="VALORANT Site">
     <title>Play Valorant</title>
     <link href="styles/index.css" rel="stylesheet">
     <link href="https://lolstatic-a.akamaihd.net/webfonts/live/css/valorant/fonts.css" rel="stylesheet">
+    <link href="//db.onlinewebfonts.com/c/21379d8fbabd2222e354e68834a8d266?family=MarkforEbiquityW05-Bold" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
@@ -16,17 +18,59 @@
     <header>
       <nav>
         <ul>
-          <li class="riotLi">
-            <button class="riot" type="button" name="button"></button>
+          <li>
+            <button type="button" name="button"></button>
           </li>
-          <li class="logoLi">
-            <img class="logo" src="./assets/images/header/logo.svg" alt="logo">
+          <li>
+            <img src="./assets/images/header/logo.svg" alt="logo">
           </li>
-          <li class="langLi">
-            <img class="lang" src="./assets/images/header/lang.svg" alt="lang">
+          <li>
+            <ul class="dropdown-container">
+              <li class="dropdown-content">
+                  <a href="#"><img src="./assets/images/logo.svg" alt="logo"></a>
+              </li>
+              <li class="dropdown">
+                <a href="#">GAME INFO</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">GAME INFO</a></li>
+                  <li><a href="#">AGENTS</a></li>
+                  <li><a href="#">MAPS</a></li>
+                  <li><a href="#">ARSENAL</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">MEDIA</a>
+              </li>
+              <li>
+                <a href="#">NEWS</a>
+              </li>
+              <li class="dropdown">
+                <a href="#">SUPPORT</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">SUPPORT</a></li>
+                  <li><a href="#">SPECS</a></li>
+                  <li><a href="#">SUPPORT</a></li>
+                  <li><a href="#">COMMUNITY CODE</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">OUR SOCIALS</a>
+                <ul class="dropdown-content">
+                  <li><a href="#">OUR SOCIALS</a></li>
+                  <li><a href="#">TWITTER</a></li>
+                  <li><a href="#">YOUTUBE</a></li>
+                  <li><a href="#">INSTAGRAM</a></li>
+                  <li><a href="#">FACEBOOK</a></li>
+                  <li><a href="#">DISCORD</a></li>
+                </ul>
+              </li>
+            </ul>
           </li>
-          <li class="menuMobileLi">
-            <button class="menuMobile" type="button" name="button"></button>
+          <li>
+            <img src="./assets/images/header/lang.svg" alt="lang">
+          </li>
+          <li>
+            <button type="button" name="button"></button>
           </li>
         </ul>
       </nav>
@@ -54,7 +98,7 @@
       </section>
 
       <!-- LATEST NEWS -->
-      <section class="latestNews">
+      <section>
         <h2>
           <span>We are</span>
           <span>VALORANT</span>
@@ -62,131 +106,150 @@
         <h2>LATEST NEWS</h2>
         <ul>
           <li>
-            <article>
-              <img src="./assets/images/news/Valorant_Dev_Diary_24_Banner.jpg" alt="banner1">
-              <time datetime="2020-11-16">16/11/20 . </time>
-              <span>Game Updates</span>
-              <h3>The Art of VALORANT Map Environments</h3>
-            </article>
+            <a href="#">
+              <article>
+                <img src="./assets/images/news/Valorant_Dev_Diary_24_Banner.jpg" alt="banner1">
+                <time datetime="2020-11-16">16/11/20 . </time>
+                <span>Game Updates</span>
+                <h3>The Art of VALORANT Map Environments</h3>
+              </article>
+            </a>
           </li>
           <li>
-            <article>
-              <img src="./assets/images/news/VAL_Patch_1_10_Notes_Banner.jpg" alt="banner">
-              <time datetime="2020-11-16">16/11/20 . </time>
-              <span>Game Updates</span>
-              <h3>The Art of VALORANT Map Environments</h3>
-            </article>
+            <a href="#">
+              <article>
+                <img src="./assets/images/news/VAL_Patch_1_10_Notes_Banner.jpg" alt="banner">
+                <time datetime="2020-11-16">16/11/20 . </time>
+                <span>Game Updates</span>
+                <h3>The Art of VALORANT Map Environments</h3>
+              </article>
+            </a>
           </li>
           <li>
-            <article>
-              <img src="./assets/images/news/act-3-article-banner.jpg" alt="banner3">
-              <time datetime="2020-11-16">16/11/20 . </time>
-              <span>Game Updates</span>
-              <h3>The Art of VALORANT Map Environments</h3>
-            </article>
+            <a href="#">
+              <article>
+                <img src="./assets/images/news/act-3-article-banner.jpg" alt="banner3">
+                <time datetime="2020-11-16">16/11/20 . </time>
+                <span>Game Updates</span>
+                <h3>The Art of VALORANT Map Environments</h3>
+              </article>
+            </a>
           </li>
         </ul>
       </section>
 
       <!-- WE ARE VALORANT -->
-      <section class="weAreValorant">
+      <section>
         <h2>WE ARE VALORANT</h2>
-        <h3>DEFY THE LIMITS</h3>
-        <p>
-          <span>
-            Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.
-          </span>
-          <span>
-            Watch the gameplay trailer here.
-          </span>
-        </p>
+        <div>
+          <div>
+          <h3>DEFY THE LIMITS</h3>
+          <p>
+            <span>
+              Blend your style and experience on a global, competitive stage. You have 13 rounds to attack and defend your side using sharp gunplay and tactical abilities. And, with one life per-round, you'll need to think faster than your opponent if you want to survive. Take on foes across Competitive and Unranked modes as well as Deathmatch and Spike Rush.
+            </span>
+            <span>
+              <a href="#">
+                Watch the gameplay trailer here.
+              </a>
+            </span>
+          </p>
+        </div>
+        <div>
           <img src="./assets/images/game-overview-poster-launch.jpg" alt="Game overview poster launch">
           <button type="button" name="button"></button>
+        </div>
+      </div>
       </section>
 
       <!-- YOUR AGENTS -->
-      <div class="red"></div>
-      <section class="theAgents">
-        <h2>YOUR AGENTS</h2>
-        <h3>CREATIVITY IS YOUR GREATEST WEAPON.</h3>
-        <p>
-          <span>
-            More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlight reels will look the same.
-          </span>
-        </p>
+      <section>
+        <div>
+          <h2>YOUR AGENTS</h2>
+          <h3>CREATIVITY IS YOUR GREATEST WEAPON.</h3>
+          <p>
+            <span>
+              More than guns and bullets, you’ll choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. No two Agents play alike, just as no two highlight reels will look the same.
+            </span>
+          </p>
+          <a href="">
+            <span>
+              <span></span>
+              <span>VIEW ALL AGENTS</span>
+            </span>
+          </a>
+        </div>
         <img src="./assets/images/raze-reyna.png" alt="Raze Reyna">
-        <a>
-          <span>
-            <span></span>
-            <span>VIEW ALL AGENTS</span>
-          </span>
-        </a>
       </section>
 
 
       <!-- THE MAPS -->
-      <section class="theMap">
-        <h2>THE MAPS</h2>
-        <h3>DETONATE OR DEFUSE</h3>
-        <p>
-            Haven. Bind. Split. Ascent. Each a stage for a multitude of savvy plays, agent clutches, and team strategies.
-        </p>
+      <section>
+        <div>
+            <h2>THE MAPS</h2>
+            <h3>DETONATE OR DEFUSE</h3>
+            <p>
+                Haven. Bind. Split. Ascent. Each a stage for a multitude of savvy plays, agent clutches, and team strategies.
+            </p>
+          <a href="#">
+            <span>
+              <span></span>
+              <span>VIEW ALL MAPS</span>
+            </span>
+          </a>
+        </div>
         <img src="./assets/images/map.png" alt="Map Valorant">
-        <a>
-          <span>
-            <span></span>
-            <span>VIEW ALL MAPS</span>
-          </span>
-        </a>
       </section>
 
     </main>
 
     <footer>
-      <h4>Download Game Client</h4>
-      <a href="#"><img src="./assets/images/footer/riotLogo.svg" alt="Logo"></a>
-      <ul>
-        <li>
-          <a href="#"><img src="./assets/images/footer/twitter.svg" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="./assets/images/footer/youtube.svg" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="./assets/images/footer/instagram.svg" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="./assets/images/footer/facebook.svg" alt=""></a>
-        </li>
-        <li>
-          <a href="#"><img src="./assets/images/footer/discord.svg" alt=""></a>
-        </li>
-      </ul>
-      <p>
-        © 2020 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.
-      </p>
-      <ul>
-        <li>
-          <a href="#"></a>
-        </li>
-        <li>
-          <a href="#"></a>
-        </li>
-      </ul>
-      <ul>
-        <li>
-          <img src="./assets/images/footer/EU_-_16_black.jpg" alt="">
-        </li>
-        <li>
-          <img src="./assets/images/footer/EU_-_descriptor_violence.png" alt="">
-        </li>
-        <li>
-          <img src="./assets/images/footer/EU_-_descriptor_in-game-purchase.png" alt="">
-        </li>
-        <li>
-          <img src="./assets/images/footer/Germany_-_16_(small).png" alt="">
-        </li>
-      </ul>
+      <div>
+        <h4>Download Game Client</h4>
+        <a href="#"><img src="./assets/images/footer/riotLogo.svg" alt="Logo"></a>
+        <ul>
+          <li>
+            <a href="#"><img src="./assets/images/footer/twitter.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="./assets/images/footer/youtube.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="./assets/images/footer/instagram.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="./assets/images/footer/facebook.svg" alt=""></a>
+          </li>
+          <li>
+            <a href="#"><img src="./assets/images/footer/discord.svg" alt=""></a>
+          </li>
+        </ul>
+        <p>
+          © 2020 Riot Games, Inc. Riot Games, VALORANT, and any associated logos are trademarks, service marks, and/or registered trademarks of Riot Games, Inc.
+        </p>
+        <ul>
+          <li>
+            <a href="#">Privacy Notice</a>
+          </li>
+          <li>
+            <a href="#">Terms of Service</a>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <img src="./assets/images/footer/EU_-_16_black.jpg" alt="">
+          </li>
+          <li>
+            <img src="./assets/images/footer/EU_-_descriptor_violence.png" alt="">
+          </li>
+          <li>
+            <img src="./assets/images/footer/EU_-_descriptor_in-game-purchase.png" alt="">
+          </li>
+          <li>
+            <img src="./assets/images/footer/Germany_-_16_(small).png" alt="">
+          </li>
+        </ul>
+      </div>
     </footer>
 
     <script src="scripts/script.js"></script>

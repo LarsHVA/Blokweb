@@ -24,13 +24,15 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 
 ## Voortgang 3 (week 6)
 
--same as voortgang 1-
-
+-dit ging goed & dit was lastig-
+-Er zit nu een grid en het is nu deels responsive-
+<img src="images_readme/3gesprek.png" width="389px" alt="Home screenshot">
 
 
 ## Voortgang 2 (week 5)
 
--same as voortgang 1-
+-dit ging goed & dit was lastig-
+-Vergeten schreeshot te nemen, heb de 2 pagina laten zien die nog niet helemaal uitgewerkt was-
 
 
 
@@ -39,8 +41,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ### Stand van zaken
 
 -dit ging goed & dit was lastig-
+-Het was moeilijk om met alleen flexbox de hele achtergrond rood te maken ivm de linker lijn-
 
 **Screenshot(s):**
+
+<img src="images_readme/eerstegesprek.png" width="389px" alt="Home screenshot">
 
 -screenshot(s) van hoe ver je bent met korte uitleg-
 
