@@ -541,7 +541,6 @@ section:nth-of-type(5) img {
   }
   section:nth-of-type(5) img {
     transform: translateX(62%);
-    top: 5;
   }
   section:nth-of-type(5) a {
     margin-top: 0.9375em;
@@ -549,6 +548,5 @@ section:nth-of-type(5) img {
     bottom: unset;
     left: unset;
     transform: unset;
-    margin-left: 0.625;
   }
 }
