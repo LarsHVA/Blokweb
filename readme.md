@@ -19,11 +19,14 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Eindgesprek (week 7/8)
 
 -dit ging goed & dit was lastig-
+-Menu was lastig omdat ik er één wilde gebruiken plaats van 2 vanwege screenreaders-
 
 **Screenshot(s):**
 
 -screenshot(s) van je eindresultaat-
 
+<img src="images_readme/eindgesprekindex.png" width="389px" alt="Home screenshot">
+<img src="images_readme/eindgesprekagent.png" width="389px" alt="Home screenshot">
 
 
 ## Voortgang 3 (week 6)
