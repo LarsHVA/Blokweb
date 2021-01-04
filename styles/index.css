@@ -213,15 +213,19 @@ section:nth-of-type(3) p span:last-of-type{
   color: var(--v-red);
 }
 
-section:nth-of-type(3) button{
+section:nth-of-type(3) div div:nth-of-type(2) {
   position: relative;
-  bottom: 6.25em;
+}
+
+section:nth-of-type(3) button {
+  position: absolute;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
   width: 4.375em;
   height: 4.375em;
   border: 0.0625em solid var(--v-white);
-  background: url("../assets/images/playButton.svg");
+  background: url(../assets/images/playButton.svg);
   background-color: var(--v-red);
 }
 
@@ -490,8 +494,8 @@ section:nth-of-type(5) img {
     display: flex;
   }
   section:nth-of-type(3) div div {
-    display: unset;
-  }
+  display: inline-table;
+}
   section:nth-of-type(3) div div:first-of-type {
     margin: 0 3.125em;
   }

@@ -8,7 +8,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 ## Bronnenlijst
 1. -https://stackoverflow.com/questions/2460100/remove-the-complete-styling-of-an-html-button-submit-
 2. -http://jsbin.com/nukic/2/edit?html,css,output-
-3. -...-
+3. -https://css-tricks.com/snippets/css/complete-guide-grid/-
+4. -https://css-tricks.com/snippets/css/a-guide-to-flexbox/-
+5. -https://codepen.io/Axiol/pen/mdeyWwQ-
+6. -https://stackoverflow.com/questions/14483589/z-index-not-working-with-position-absolute-
+7. -https://www.w3schools.com/css/css_dropdowns.asp-
 
 
 

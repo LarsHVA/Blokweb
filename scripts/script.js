@@ -1,32 +1,24 @@
-// // MENU
-// const nav = document.querySelector("nav");
-// const smallDevice = window.matchMedia("(min-width: 820px)");
-//
-// smallDevice.addListener(handleDeviceChange);
-//
-// function handleDeviceChange(e) {
-//   if (e.matches) {
-//     nav.innerHTML  = "";
-//   }
-// }
-
 // Calculate border Height
 let mainHeight = document.querySelector("main");
 let sectionHeight = document.querySelector("section:first-of-type");
 let mainHeightCalculate = mainHeight.offsetHeight - sectionHeight.offsetHeight;
+// Hoogte doorgeven aan Property
 document.documentElement.style.setProperty("--v-height", mainHeightCalculate + 'px');
 document.documentElement.style.setProperty("--v-top", sectionHeight.offsetHeight + 'px');
 
 console.log(mainHeightCalculate);
 
-// Menu
+// Menu in en uit laten klappen
 let button = document.querySelector("header nav ul li:last-of-type button");
 button.addEventListener("click", ShowVMenu);
 function ShowVMenu(){
 	let showMenu = document.querySelector("header nav ul li:nth-of-type(3) ul");
 	showMenu.classList.toggle("menuShow");
+	// Knop icon veranderen
+  button.classList.toggle("exit");
 }
 
+// Submenu in en uit laten klappen
 let button2 = document.querySelector("header nav ul li:nth-of-type(3) ul li:nth-of-type(2)");
 button2.addEventListener("click", ShowVMenu2);
 function ShowVMenu2(){
@@ -34,6 +26,7 @@ function ShowVMenu2(){
 	menuShowGameInfo.classList.toggle("menuShowGameInfo");
 }
 
+// Submenu in en uit laten klappen
 let button3 = document.querySelector("header nav ul li:nth-of-type(3) ul li:nth-of-type(5)");
 button3.addEventListener("click", ShowVMenu3);
 function ShowVMenu3(){
@@ -41,6 +34,7 @@ function ShowVMenu3(){
 	menuShowGameSupport.classList.toggle("menuShowGameSupport");
 }
 
+// Submenu in en uit laten klappen
 let button4 = document.querySelector("header nav ul li:nth-of-type(3) ul li:nth-of-type(6)");
 button4.addEventListener("click", ShowVMenu4);
 function ShowVMenu4(){
@@ -48,6 +42,7 @@ function ShowVMenu4(){
 	menuShowGameSocial.classList.toggle("menuShowGameSocial");
 }
 
+// Object met agents en bijhorende content
 let agent = [
     {
         agent: "./assets/images/agents/V_AGENTS_587x900_Jett.png",
@@ -93,15 +88,19 @@ let agent = [
         }
       ];
 
+// Ophalen welke agent is geselecteerd
 let selectAgent = document.querySelectorAll("section:first-of-type div ul li h2");
   for(let i = 0; i < selectAgent.length; i++){
   selectAgent[i].addEventListener("click", change);
   }
 
+// Content naar agent aanpassen
 function change(e) {
 let selectedAgent = e.target.textContent;
 console.log(selectedAgent);
 let wo;
+
+// agent nummer meegeven en alt aanpassen
 if (selectedAgent == "JETT") {
   document.querySelector("section:first-of-type img").alt = "Jett";
   wo = 0;
@@ -121,11 +120,13 @@ document.querySelector("section:nth-of-type(3) h3").innerHTML = agent[wo].abilit
 document.querySelector("section:nth-of-type(3) p").innerHTML = agent[wo].ability1Text;
 }
 
+// Ability selecteren
 let selectAgentAbility = document.querySelectorAll("section:nth-of-type(3) ul li");
-  for( i = 0; i < selectAgentAbility.length; i++){
+  for(let i = 0; i < selectAgentAbility.length; i++){
   selectAgentAbility[i].addEventListener("click", changeAbility);
   }
 
+// Ability content weizigen
 function changeAbility(e) {
 let selectedAgentAbility = e.target.alt;
 console.log(selectedAgentAbility);
@@ -133,11 +134,13 @@ let abili = document.querySelector("section:nth-of-type(3) video");
 let abiliName = document.querySelector("section:nth-of-type(3) h3");
 let abiliText = document.querySelector("section:nth-of-type(3) p");
 let val;
+// Agent ophalen
 if (document.querySelector("section:first-of-type img").alt == "Jett") {
   val = "0";
 } else if (document.querySelector("section:first-of-type img").alt == "Omen") {
   val = "1";
 }
+// Ability content weizigen
 if (selectedAgentAbility == "Q") {
   abili.src = agent[val].ability1Video;
   abiliName.innerHTML = agent[val].ability1Name;
